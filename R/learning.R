@@ -105,3 +105,26 @@ nhanes_update <- nhanes_small %>%
       "young"
     )
   )
+
+
+# Exercise ----------------------------------------------------------------
+
+nhanes_small %>%
+  filter(bmi >= 20 & bmi <= 40 & diabetes == "yes")
+
+nhanes_modified <- nhanes_small %>%
+  mutate(
+    mean_arterial_pressure = ((2 * bp_dia_ave) + bp_sys_ave) / 3,
+    young_child = if_else(age <= 6, "Yes", "No")
+  )
+
+
+# Summarizing -------------------------------------------------------------
+
+nhanes_small %>%
+  filter(!is.na(diabetes)) %>%
+  group_by(diabetes, phys_active) %>%
+  summarize(
+    max_bmi = max(bmi, na.rm = TRUE),
+    min_bmi = min(bmi, na.rm = TRUE)
+  )
