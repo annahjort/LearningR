@@ -6,6 +6,8 @@ Morning changes
 More changes
 >>>>>>> 39708f3f2af8e0d1477616cba98a96a088bdb37f
 
+Testing changes
+
 # LearningR:
 
 TODO: Give a brief description of what your project is about
