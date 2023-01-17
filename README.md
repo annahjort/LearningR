@@ -1,6 +1,8 @@
 Anna Hjort
 TODO: Add more to the title of your project here
-<<<<<<< HEAD
+
+Adding other changes
+
 Morning changes
 
 More changes
