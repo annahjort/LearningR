@@ -90,3 +90,18 @@ nhanes_small %>%
 nhanes_small %>%
   select(starts_with("bp_")) %>%
   rename(bp_systolic = bp_sys_ave)
+
+
+# Mutating columns --------------------------------------------------------
+
+nhanes_update <- nhanes_small %>%
+  mutate(
+    age_months = age * 12,
+    logged_bmi = log(bmi),
+    age_weeks = age_months * 4,
+    old = if_else(
+      age >= 30,
+      "old",
+      "young"
+    )
+  )
