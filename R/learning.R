@@ -1,3 +1,5 @@
+Adding another conflict.
+Here's an example of a conflict.
 10
 
 # R basics ----------------------------------------------------------------
