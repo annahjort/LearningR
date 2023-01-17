@@ -1,8 +1,3 @@
-Adding a third conflict from web. 
-Adding another conflict.
-Here's an example of a conflict.
-10
-
 # R basics ----------------------------------------------------------------
 
 weight_kilos <- 100
@@ -22,6 +17,28 @@ summary(airquality)
 # Packages ----------------------------------------------------------------
 
 library(tidyverse)
+library(NHANES)
 
 
+# Looking at data ---------------------------------------------------------
 
+glimpse(NHANES)
+colnames(NHANES)
+select(NHANES, Age, Weight, BMI)
+select(NHANES, -HeadCirc)
+select(NHANES, starts_with("BP"))
+select(NHANES, ends_with("Day"))
+select(NHANES, contains("Age"))
+
+nhanes_small <- select(
+  NHANES,
+  Age,
+  Gender,
+  BMI,
+  Diabetes,
+  PhysActive,
+  BPSysAve,
+  BPDiaAve,
+  Education
+)
+nhanes_small
